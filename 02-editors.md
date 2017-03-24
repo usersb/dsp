@@ -81,7 +81,7 @@ Upload these 3 files to the [`editors`](editors/) folder.
 
 What terminal editor will be your preferred choice of use? How did you make your decision?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> I prefer to use emacs editor as its powerful, has lots of extensible options and I find it easy to use.
 
 --
 
@@ -89,6 +89,52 @@ What terminal editor will be your preferred choice of use? How did you make your
 
 What graphical editor will you use? How did you make your decision? What are some interesting features of your editor? What are some useful keyboard shortcuts for your editor? How do you customize your editor?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
-
- 
+>> I prefer 'Spyder' as my graphical editor of choice because its already installed along with my Anaconda software.
+   Spyder Useful keyboard shortcuts:
+   
+   Global -
+   Debug - Ctrl+F5
+   Debug continue - Ctrl+F12
+   Debug Exit - Ctrl+Shift+F12
+   Debug step into - Ctrl+F11
+   Debug over - Ctrl+F10
+   
+   File Switcher - Ctrl+p
+   Quit  - Ctrl+Q
+   Run - F5
+   Show Toolbars - Alt+Shift+T
+   
+   Console -
+   Clear Line - Shift+Esc
+   Clear Shell - Ctrl+L
+   Inspect current object - Ctrl+I
+   
+   Editor -
+   Block comment - Ctrl+4
+   Breakpoint - F12
+   Copy Line - Shift+Alt+Down
+   Delete Line - Ctrl+D
+   Duplicate Line - Shift_Alt+Up
+   End of Document - Ctrl+Down
+   End of Line - Meta+E
+   Go to definition - Ctrl+G
+   Go to Line - Ctrl+L
+   Kill next word - Meta+D
+   Kill previous word - Meta+Backspace
+   Kill to line end - Meta+K
+   Kill to line start - Meta+U
+   Redo - Ctrl+Shift+Z
+   Run selection - F9
+   Show/Hide Project Explorer - Ctrl+Alt+P
+   Start of document - Ctrl+Up
+   Start of Line - Meta+A
+   Toggle comment - Ctrl+1
+   Unblock comment - Ctrl+5
+   
+   Profiler -
+   Run profiler - F10
+   
+   Pylint - 
+   Run analysis - F8
+   
+   Spyder editor can be customized through the 'Preferences' menu.
