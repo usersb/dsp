@@ -20,28 +20,32 @@ Interesting answer from [Stackoverflow.com](http://stackoverflow.com/questions/6
 
 * Difference between list and tuple
 1. Literal
+   ```Python
    someTuple = (1,2)
    someList  = [1,2] 
+   ```
    
 2. Size
+   ```Python
    a = tuple(range(1000))
    b = list(range(1000))
 
    a.__sizeof__() # 8024
    b.__sizeof__() # 9088
+   ```
    
    Due to the smaller size of a tuple operation with it a bit faster but not that much to mention about until you have a huge      amount of elements.
    
  3. Permitted operations
- 
+    ```Python
     b    = [1,2]   
     b[0] = 3       # [3, 2]
 
     a    = (1,2)
     a[0] = 3       # Error
-   
+    ```
    that also mean that you can't delete element or sort tuple. At the same time you could add new element to both list and t   tuple with the only difference that you will change id of the tuple by adding element
-   
+   ```Python
    a     = (1,2)
    b     = [1,2]  
 
@@ -53,15 +57,16 @@ Interesting answer from [Stackoverflow.com](http://stackoverflow.com/questions/6
 
    id(a)          # 140230916878160
    id(b)          # 748527696
-   
+   ```
 4. Usage
    List being mutable can't be used as a key in the dictionary, while tuple can be used. as key in dictionary.
-   
+   ```Python
    a    = (1,2)
    b    = [1,2] 
 
    c = {a: 1}     # OK
    c = {b: 1}     # Error
+   ```
 ---
 
 ### Q2. Lists &amp; Sets
@@ -70,7 +75,8 @@ How are Python lists and sets similar and different? Give examples of using both
 
 >> 
 * Lists and sets are similar in that both are used to store information.
-  -Use sets to remove duplicates or check membership
+---
+  -Use sets to remove duplicates or check membership  
   -Use list to iterate over elements
 * Lists are ordered and can repeat while sets are unordered and unique.
   -Sets are faster for checking membership (for example, x in a Set)
@@ -93,15 +99,17 @@ Describe Python's `lambda`. What is it, and what is it used for? Give at least o
 
 * Examples:
 1.
-
+```Python
 input_list = [(1,'a'),(2,'c'),(3,'b')]
 sorted(input_list, key=lambda x:x[1])
 
 Out[2]:
 [(1, 'a'), (3, 'b'), (2, 'c')]
-
+```
 2.
+```Python
 mult3 = filter(lambda x: x % 3 == 0, [1, 2, 3, 4, 5, 6, 7, 8, 9])
+```
 sets mult3 to [3, 6, 9], those elements of the original list that are multiples of 3. 
 ---
 
