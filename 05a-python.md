@@ -120,8 +120,13 @@ Explain list comprehensions. Give examples and show equivalents with `map` and `
 >> 
 ** List Comprehensions**
 
-Indexing through lists and performing calculations is a frequent task.  Python allows you to combine looping and list manipulation into one operation.
-List comprehension is a quick way to create lists. Usually it is used in situations where an operation is applied to each element of another sequence
+Indexing through lists and performing calculations is a frequent task.  Python allows you to combine looping and list manipulation into one operation. Usually it is used in situations where an operation is applied to each element of another sequence
+
+List comprehensions provide a short and concise way to create lists. It consists of square brackets containing an expression followed by a for clause, then zero or more for or if clauses. The expressions can be anything, meaning you can put in all kinds of objects in lists. The result would be a new list made after the evaluation of the expression in context of the if and for clauses.
+
+```Python
+variable = [out_exp for out_exp in input_list if out_exp == 2]
+```
 
 ```Python
 iStr = "hello, Are you learning python?"
@@ -205,14 +210,35 @@ map() on the other hand, applies the supplied function to each element of the it
 
 **Set Comprehensions**
 
+They are also similar to list comprehensions. The only difference is that they use braces {}. Here is an example:
 
-
-
+```Python
+squared = {x**2 for x in [1, 1, 2]}
+print(squared)
+# Output: {1, 4}
+```
 
 **Dictionary Comprehensions**
+Here is an example
 
+```Python
 
+mcase = {'a': 10, 'b': 34, 'A': 7, 'Z': 3}
 
+mcase_frequency = {
+    k.lower(): mcase.get(k.lower(), 0) + mcase.get(k.upper(), 0)
+    for k in mcase.keys()
+}
+
+# mcase_frequency == {'a': 17, 'z': 3, 'b': 34}
+```
+In the above example we are combining the values of keys which are same but in different typecase.
+
+You can also quickly switch keys and values of a dictionary:
+
+```Python
+{v: k for k, v in some_dict.items()}
+```
 ---
 
 ### Complete the following problems by editing the files below:
