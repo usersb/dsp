@@ -75,7 +75,6 @@ How are Python lists and sets similar and different? Give examples of using both
 
 >> 
 * Lists and sets are similar in that both are used to store information.
----
   -Use sets to remove duplicates or check membership  
   -Use list to iterate over elements
 * Lists are ordered and can repeat while sets are unordered and unique.
