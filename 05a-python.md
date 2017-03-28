@@ -70,11 +70,15 @@ How are Python lists and sets similar and different? Give examples of using both
 
 >> 
 * Lists and sets are similar in that both are used to store information.
-  Use sets to remove duplicates or check membership
-  Use list to iterate over elements
+  -Use sets to remove duplicates or check membership
+  -Use list to iterate over elements
 * Lists are ordered and can repeat while sets are unordered and unique.
-  Sets are faster for checking membership (for example, x in aSet)
-  Sets are faster than lists for finding an element because it uses an underlying hash table as its data structure while lists  are arrays.
+  -Sets are faster for checking membership (for example, x in a Set)
+  -Sets are faster than lists for finding an element because it uses an underlying hash table as its data structure while lists  are arrays.
+  
+* Sets allows you to do operations such as intersection, union, difference, and symmetric difference, i.e operations of math's set theory. Sets doesn't allow indexing and are implemented on hash tables.
+
+* In lists, the elements are accessed by indices.
 
 ---
 
@@ -82,12 +86,23 @@ How are Python lists and sets similar and different? Give examples of using both
 
 Describe Python's `lambda`. What is it, and what is it used for? Give at least one example, including an example of using a `lambda` in the `key` argument to `sorted`.
 
->>  
+>> 
+* Python supports a style of programming called functional programming where you can pass functions to other functions to do stuff.
+
 * Lambda expressions (or lambda forms) can be used to create anonymous functions that can be used to define functions needed on the fly. It takes any number of arguments and returns the value of a single expression.
 
 * Examples:
+1.
 
+input_list = [(1,'a'),(2,'c'),(3,'b')]
+sorted(input_list, key=lambda x:x[1])
 
+Out[2]:
+[(1, 'a'), (3, 'b'), (2, 'c')]
+
+2.
+mult3 = filter(lambda x: x % 3 == 0, [1, 2, 3, 4, 5, 6, 7, 8, 9])
+sets mult3 to [3, 6, 9], those elements of the original list that are multiples of 3. 
 ---
 
 ### Q4. List Comprehension, Map &amp; Filter
