@@ -66,7 +66,6 @@ There are three main states that your files can reside in:
 
 - **Committed** means that the changes you made have been stored locally.
 
-
 The basic workflow goes something like this:
 
 1. Modify the files.
