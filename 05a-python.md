@@ -109,7 +109,8 @@ Out[2]:
 ```Python
 mult3 = filter(lambda x: x % 3 == 0, [1, 2, 3, 4, 5, 6, 7, 8, 9])
 ```
-sets mult3 to [3, 6, 9], those elements of the original list that are multiples of 3. 
+* sets mult3 to [3, 6, 9], those elements of the original list that are multiples of 3.
+
 ---
 
 ### Q4. List Comprehension, Map &amp; Filter
