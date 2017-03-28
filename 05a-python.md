@@ -118,19 +118,100 @@ mult3 = filter(lambda x: x % 3 == 0, [1, 2, 3, 4, 5, 6, 7, 8, 9])
 Explain list comprehensions. Give examples and show equivalents with `map` and `filter`. How do their capabilities compare? Also demonstrate set comprehensions and dictionary comprehensions.
 
 >> 
-* List Comprehensions
+** List Comprehensions**
+
 Indexing through lists and performing calculations is a frequent task.  Python allows you to combine looping and list manipulation into one operation.
 List comprehension is a quick way to create lists. Usually it is used in situations where an operation is applied to each element of another sequence
 
 ```Python
-aStr = "hello, what is your name?"
- ' '.join([x.upper() for x in aStr.split()])
-Out[13]: 'HELLO, WHAT IS YOUR NAME?'
+iStr = "hello, Are you learning python?"
+(' '.join([x.upper() for x in iStr.split()]))
+
+Out[2]: 'HELLO, ARE YOU LEARNING PYTHON?'
 ```
+* Below is an example that returns a list of numbers corresponding to 3 + 4*n+n\**2 for 0<= n <= 10.
+
 ```Python
  [3+4*n+n**2 for n in range(0,11)]
- Out[173]: [3, 8, 15, 24, 35, 48, 63, 80, 99, 120, 143
+ Out[1]: [3, 8, 15, 24, 35, 48, 63, 80, 99, 120, 143]
 ```
+
+**Map**
+
+Map applies a function to all the items in an input_list. Here is the blueprint:
+
+```Python
+map(function_to_apply, list_of_inputs)
+```
+Most of the times we want to pass all the list elements to a function one-by-one and then collect the output.
+Map allows us to implement this in a simpler and nicer way.
+
+```Python
+items = [1, 2, 3, 4, 5]
+squared = list(map(lambda x: x**2, items))
+```
+
+Instead of a list of inputs we can even have a list of functions!
+```Python
+def multiply(x):
+    return (x*x)
+def add(x):
+    return (x+x)
+
+funcs = [multiply, add]
+for i in range(5):
+    value = list(map(lambda x: x(i), funcs))
+    print(value)
+
+# Output:
+# [0, 0]
+# [1, 2]
+# [4, 4]
+# [9, 6]
+# [16, 8]
+```
+
+**filter**
+
+filter creates a list of elements for which a function returns true. 
+example:
+
+```Python
+number_list = range(-5, 5)
+less_than_zero = list(filter(lambda x: x < 0, number_list))
+print(less_than_zero)
+
+# Output: [-5, -4, -3, -2, -1]
+```
+The filter resembles a for loop but it is a builtin function and faster.
+
+**Difference between map and filter**
+
+filter(), as its name suggests, filters the original iterable and retains the items that returns True for the function provided to filter().
+
+map() on the other hand, applies the supplied function to each element of the iterable and return a list of results for each element.
+
+*example to compare them:
+```Python
+
+>>> def f(x): return x % 2 != 0 and x % 3 != 0
+>>> range(11)
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+>>> map(f, range(11)) #the ones that returns TRUE are 1, 5 and 7
+[False, True, False, False, False, True, False, True, False, False, False]
+>>> filter(f, range(11)) #So, filter returns 1, 5 and 7
+[1, 5, 7]
+```
+
+**Set Comprehensions**
+
+
+
+
+
+**Dictionary Comprehensions**
+
+
 
 ---
 
