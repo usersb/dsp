@@ -117,7 +117,20 @@ mult3 = filter(lambda x: x % 3 == 0, [1, 2, 3, 4, 5, 6, 7, 8, 9])
 
 Explain list comprehensions. Give examples and show equivalents with `map` and `filter`. How do their capabilities compare? Also demonstrate set comprehensions and dictionary comprehensions.
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> 
+* List Comprehensions
+Indexing through lists and performing calculations is a frequent task.  Python allows you to combine looping and list manipulation into one operation.
+List comprehension is a quick way to create lists. Usually it is used in situations where an operation is applied to each element of another sequence
+
+```Python
+aStr = "hello, what is your name?"
+ ' '.join([x.upper() for x in aStr.split()])
+Out[13]: 'HELLO, WHAT IS YOUR NAME?'
+```
+```Python
+ [3+4*n+n**2 for n in range(0,11)]
+ Out[173]: [3, 8, 15, 24, 35, 48, 63, 80, 99, 120, 143
+```
 
 ---
 
