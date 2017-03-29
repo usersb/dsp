@@ -97,7 +97,12 @@ def verbing(s):
     >>> verbing('do')
     'do'
     """
-    raise NotImplementedError
+    if len(s) >= 3:
+        if s[-3:] != 'ing': 
+            s = s + 'ing'
+        else: 
+            s = s + 'ly'
+    return s
 
 
 def not_bad(s):
@@ -117,7 +122,10 @@ def not_bad(s):
     >>> not_bad("It's bad yet not")
     "It's bad yet not"
     """
-    raise NotImplementedError
+    if s.find('not') < s.find('bad'):
+        return s[:s.find('not')] + 'good' + s[s.find('bad')+3:]
+    else:
+        return s
 
 
 def front_back(a, b):
@@ -136,4 +144,7 @@ def front_back(a, b):
     >>> front_back('Kitten', 'Donut')
     'KitDontenut'
     """
-    raise NotImplementedError
+    a_mid = int((len(a)/2)+(len(a)%2))
+    b_mid = int((len(b)/2)+(len(b)%2))
+    
+    return a[:a_mid] + b[:b_mid] + a[a_mid:] + b[b_mid:]
