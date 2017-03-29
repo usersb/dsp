@@ -18,7 +18,10 @@ def donuts(count):
     >>> donuts(99)
     'Number of donuts: many'
     """
-    raise NotImplementedError
+    if count >= 10:
+        print('Number of donuts: many')
+    else:
+        print('Number of donuts: {}'.format(count))
 
 
 def both_ends(s):
