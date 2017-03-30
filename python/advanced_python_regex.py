@@ -37,3 +37,15 @@ def num_titles(faculty):
 title_count_dict = num_titles(faculty)
 print(title_count_dict)
 
+
+#Q3. Search for email addresses and put them in a list. Print the list of email addresses.
+#    faculty['email'] can be printed as it is but following is the method using regular expressions
+
+def print_emails(faculty):
+    emails = re.findall(r'[\w\.-]+@[\w\.-]+',str(faculty['email']))
+    if emails:
+        return emails
+
+emails_tobe_printed = print_emails(faculty)
+print(emails_tobe_printed)
+
