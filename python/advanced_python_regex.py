@@ -1,11 +1,12 @@
 import pandas as pd
 from collections import defaultdict
+import re
 
 faculty = pd.read_csv("faculty.csv", skipinitialspace=True)
 faculty['degree'] = faculty['degree'].str.replace('.','')
 
 #Q1. Find how many different degrees there are, and their frequencies: Ex: PhD, ScD, MD, MPH, BSEd, MS, JD, etc.
-def num_degrees(dataframe):
+def num_degrees(faculty):
     all_degrees = ' '.join(list(faculty['degree'])).split(' ')
     #print(all_degrees)
 
@@ -18,4 +19,21 @@ def num_degrees(dataframe):
 
 degree_count_dict = num_degrees(faculty)
 print(degree_count_dict)
+
+
+
+
+#Q2. Find how many different titles there are, and their frequencies: Ex: Assistant Professor, Professor
+def num_titles(faculty):
+    titles = re.findall(r'\w*\sProfessor',str(faculty['title']))
+
+    if titles:
+        title_count_dict = defaultdict(int)
+        for title in titles:
+            title_count_dict[title] += 1
+    
+    return(title_count_dict)
+
+title_count_dict = num_titles(faculty)
+print(title_count_dict)
 
