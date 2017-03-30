@@ -49,3 +49,18 @@ def print_emails(faculty):
 emails_tobe_printed = print_emails(faculty)
 print(emails_tobe_printed)
 
+
+#Q4. Find how many different email domains there are (Ex: mail.med.upenn.edu, upenn.edu, email.chop.edu, etc.). 
+#    Print the list of unique email domains.
+
+def email_domains(faculty):
+    domain_list = []
+    email_tuples = re.findall(r'([\w\.-]+)@([\w\.-]+)',str(faculty['email']))
+    for tuple in email_tuples:
+        domain_list.append(tuple[1])
+    print ("There are %d unique email domains." % len(set(domain_list)))    
+    return(set(domain_list))
+
+unique_domains = email_domains(faculty)
+print(unique_domains)
+
