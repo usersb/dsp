@@ -1,4 +1,5 @@
 import pandas as pd
+from collections import OrderedDict
 
 def create_dict(faculty):
     
@@ -60,4 +61,14 @@ def create_tupkey_dict(faculty):
         tup_dict[currentid].append(email)
     
     print(tup_dict)
+    return tup_dict
+
+
+
+
+def order_dict_lname(faculty):
+    prof_dict = create_tupkey_dict(faculty)
+    ordered_prof_dict = OrderedDict(sorted(prof_dict.items(), key = lambda x: x[0][1]))
+    print(ordered_prof_dict)
+    return ordered_prof_dict
     
