@@ -1,16 +1,14 @@
 [Think Stats Chapter 2 Exercise 4](http://greenteapress.com/thinkstats2/html/thinkstats2003.html#toc24) (Cohen's d)
 
->> An effect size is a summary statistic intended to describe the size of an effect. For example, to describe the difference between two groups, one obvious choice is the difference in the means.
+>> An effect size is a summary statistic intended to describe the size of an effect. 
 
-Mean pregnancy length for first babies is 38.601; for other babies it is 38.523. The difference is 0.078 weeks, which works out to 13 hours. As a fraction of the typical pregnancy length, this difference is about 0.2%.
+We compute Cohen's D to quantify (or measure) the difference between two groups of data.
+It is one of the ways to convey the size of the effect by comparing the difference between groups to the variability within groups ; it is defined
 
-If we assume this estimate is accurate, such a difference would have no practical consequences. In fact, without observing a large number of pregnancies, it is unlikely that anyone would notice this difference at all.
-
-Another way to convey the size of the effect is to compare the difference between groups to the variability within groups. Cohen’s d is a statistic intended to do that; it is defined
-```
 d = 	x_1 − x_2 / s
   
 where x_1 and x_2 are the means of the groups and s is the “pooled standard deviation”. Here’s the Python code that computes Cohen’s d:
+```
 def CohenEffectSize(group1, group2):
     diff = group1.mean() - group2.mean()
 
