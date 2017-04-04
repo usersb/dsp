@@ -4,7 +4,7 @@
 
 The CDF shows an almost straight line indicating that the distribution of random numbers is almost uniform.
 
-![PMF & CDF Random Distribution Plots](../img/dist_rand1.png)
+![PMF & CDF Random Distribution Plots](../img/rand_dist1.png)
 
-![PMF & CDF Random Distribution Plots](../img/dist_rand2.png)
+![PMF & CDF Random Distribution Plots](../img/rand_dist2.png)
 
