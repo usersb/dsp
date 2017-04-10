@@ -23,6 +23,7 @@ def CohenEffectSize(group1, group2):
 ``` 
 
 Effect Size(totalwgt_lb) = -0.088672927072602
+
 Effect Size(pregnancy length) = 0.028879044654449883
 
 In both the examples, the difference in means is very small relative to the difference in height between men and women(about 1.7 standard deviations)as described in the book.
